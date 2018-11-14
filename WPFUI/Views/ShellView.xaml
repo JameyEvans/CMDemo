@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPFUI.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFUI.Views"
+        cal:Message.Attach="[Event Loaded] = [Action LoadPageOne()]"
+        mc:Ignorable="d" FontSize="18" Background="#FFFFFF"
+        Title="ShellView" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Row 1 -->
+        <!--<TextBlock Text="{Binding Path=FullName, Mode=OneWay}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>-->
+        <Image Source="CDILogo.png" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="5" Width="200"/>
+        <!--<Button x:Name="LoadPageOne" Grid.Row="1" Grid.Column="1" Margin="0,0,10,10" FontSize="12">Load First Page</Button>
+        <Button x:Name="LoadPageTwo" Grid.Row="1" Grid.Column="2" Margin="0,0,10,10" FontSize="12">Load Second Page</Button>-->
+        
+        
+        
+        
+
+        <!-- Row 2 -->
+        <!--<TextBox MinWidth="100" Grid.Row="2" Grid.Column="1" x:Name="FirstName"/>
+        <TextBox MinWidth="100" Grid.Row="2" Grid.Column="2" x:Name="LastName"/>-->
+        <ToolBarTray Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Background="#DCDDDE">
+            <ToolBar Background="#DCDDDE">
+                <Button x:Name="LoadPageOne" Content="Load Page 1" />
+                <Separator Width="2" />
+                <Button x:Name="LoadPageTwo" Content="Load Page 2" />            
+            </ToolBar>            
+        </ToolBarTray>
+
+        <!-- Row 2 -->
+        
+        
+        
+        <!-- Row 3 -->
+        <ContentControl Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5"
+                        x:Name="ActiveItem" />
+        
+
+
+
+    </Grid>
+</Window>
